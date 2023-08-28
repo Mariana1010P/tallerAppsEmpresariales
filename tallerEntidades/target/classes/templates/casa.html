@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista casas</title>
+</head>
+<body>
+    <h1> Lista Casas</h1>
+    <table>
+		<tr>
+			<th>ID</th>
+			<th>Dirección</th>
+			<th>Cantidad pisos</th>
+			<th>Cantidad cuartos</th>
+			<th>Cantidad baños</th>
+			<th>Descripción</th>
+			<th>Precio</th>
+		</tr>
+		<tr th:each="casa : ${casas}">
+			<td th:text = "${casa.id}"></td>
+			<td th:text = "${casa.direccion}"></td>
+			<td th:text = "${casa.numPisos}"></td>
+			<td th:text = "${casa.numCuartos}"></td>
+			<td th:text = "${casa.numBanios}"></td>
+			<td th:text = "${casa.descripcion"></td>
+			<td th:text = "${casa.precio}"></td>
+		</tr>
+    </table>
+</body>
+</html>

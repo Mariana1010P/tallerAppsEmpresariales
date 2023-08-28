@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Aviones</title>
+</head>
+<body>
+    <h1>Lista Aviones</h1>
+    <table>
+		<tr>
+			<th>ID</th>
+			<th>Tipo</th>
+			<th>Marca</th>
+			<th>Modelo</th>
+			<th>provedor</th>
+			<th>Precio</th>
+		</tr>
+		<tr th:each="avion : ${aviones}">
+			<td th:text = "${avion.id}"></td>
+			<td th:text = "${avion.tipo}"></td>
+			<td th:text = "${avion.marca}"></td>
+			<td th:text = "${avion.modelo}"></td>
+			<td th:text = "${avion.provedor}"></td>
+			<td th:text = "${avion.precio}"></td>
+		</tr>
+	</table>
+</body>
+</html>
